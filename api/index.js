@@ -11,7 +11,6 @@ app.get("/seed", (req, res) => {
   var expiration = new Date();
   expiration.setSeconds(expiration.getSeconds() + 20);
 
-  console.log(faker.internet.httpsUrl);
   res.send({
     seed: faker.internet.email(),
     expiration: expiration.toISOString(),
